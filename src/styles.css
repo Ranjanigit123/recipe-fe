@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-    font-size: 35px;
+    font-size: 25px;
     background-color: #333;
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -46,20 +46,55 @@ body {
 }
 
 .cuisines-container {
-    width: 30%;
-    max-height: 150px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 120px;
     overflow-y: auto;
-}
-
-.cuisine-checkbox {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: -10px; /* Move slightly upwards */
+  }
+  
+  .cuisine-checkbox {
     display: flex;
     align-items: center;
+     
     margin-bottom: 0.5rem;
-}
-
-.cuisine-checkbox input {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+  
+  .cuisine-checkbox input {
     margin-right: 0.5rem;
-}
+  }
+  
+  /* For tablets and larger devices */
+  @media (min-width: 768px) {
+    .cuisines-container {
+      width: 45%;
+    }
+  }
+  
+  /* For desktops */
+  @media (min-width: 1024px) {
+    .cuisines-container {
+      width: 25%;
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 767px) {
+    .cuisines-container {
+      width: 100%;
+      max-height: 150px;
+    }
+  
+    .cuisine-checkbox {
+      font-size: 0.9rem;
+    }
+  }
+  
 
 /* Restaurants Section */
 .restaurants {
