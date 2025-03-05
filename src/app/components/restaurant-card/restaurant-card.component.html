@@ -1,0 +1,21 @@
+<!-- restaurant-card/restaurant-card.component.html -->
+
+<div class="card">
+    <img [src]="restaurant.image" 
+    class="card-img-top" [alt]="restaurant.recipename">
+    <div class="card-body">
+        <h5 class="card-title">{{ restaurant.recipename }}</h5>
+        <p class="card-text">
+            💖{{ restaurant.cuisines.join(', ') }}
+        </p>
+         
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ restaurant.description }}</li>
+         
+        <li class="list-group-item">👌Rating : {{ restaurant.rating }}</li>
+    </ul>
+     
+    <button class="recipe-btn view-btn"(click)="onViewRecipe()">View Full Recipe</button>
+    <button class="recipe-btn save-btn"(click)="onSaveRecipe()">Save Recipe</button>
+</div>

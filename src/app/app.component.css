@@ -1,0 +1,167 @@
+.headers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vh 5vw;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid gray;
+}
+
+.category-container,
+.rating-container {
+    width: 100%;
+    max-width: 10vw;
+    margin-bottom: 1rem;
+}
+
+.cuisines-container {
+    margin-top: 5vh;
+    width: 100%;
+    max-width: 15vw;
+    height: 10vh;
+    overflow-y: scroll;
+}
+
+.cuisine-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.restaurants {
+    text-align: left;
+    padding-bottom: 3vh;
+}
+
+.restaurant-card {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 18px;
+    padding: 15px;
+     
+     
+}
+
+.restaurant-card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+button {
+    background-color: #ff5733; /* Button background color */
+    color: white; /* Text color */
+    font-size: 1rem; /* Reduce font size */
+    padding: 8px 16px; /* Reduce padding */
+    border: none;
+    border-radius: 6px; /* Slightly smaller border radius */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: block; /* Block to center */
+    margin: 15px auto; /* Centers the button */
+    text-align: center;
+}
+
+/* Add hover effect */
+button:hover {
+    background-color: #e74c3c; /* Darker shade on hover */
+}
+/* General styling for recipe buttons */
+.recipe-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* View Full Recipe button */
+.view-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Save Recipe button */
+.save-btn {
+    background-color: #28a745; /* Green color */
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #1e7e34;
+}
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+/* Modal Styles */
+.full-recipe-modal,
+.favorites-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    cursor: pointer;
+    background: rgb(241, 197, 197);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Success Message */
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .restaurant-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .restaurant-cards {
+        grid-template-columns: 1fr;
+    }
+}

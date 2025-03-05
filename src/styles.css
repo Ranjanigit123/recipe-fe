@@ -1,1 +1,210 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ebed76;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.navbar {
+    font-size: 35px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Filter Section */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d63535;
+}
+
+.category-container,
+.rating-container {
+    width: 20%;
+    min-width: 150px;
+}
+
+.cuisines-container {
+    width: 30%;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.cuisine-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cuisine-checkbox input {
+    margin-right: 0.5rem;
+}
+
+/* Restaurants Section */
+.restaurants {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.restaurants h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards Layout */
+.restaurant-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+.restaurant-card {
+    border: 1px solid #080101;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #23c633 !important;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: #e80f0f;
+    margin-bottom: 1rem;
+}
+button {
+    background-color: #ff5733; /* Button background color */
+        color: white; /* Text color */
+        font-size: 1rem; /* Reduce font size */
+        padding: 8px 16px; /* Reduce padding */
+        border: none;
+        border-radius: 6px; /* Slightly smaller border radius */
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+        display: block; /* Block to center */
+        margin: 15px auto; /* Centers the button */
+        text-align: center;
+}
+
+/* Add hover effect */
+button:hover {
+    background-color: #e74c3c; /* Darker shade on hover */
+}
+/* General styling for recipe buttons */
+.recipe-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* View Full Recipe button */
+.view-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Save Recipe button */
+.save-btn {
+    background-color: #28a745; /* Green color */
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #1e7e34;
+}
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .category-container,
+    .rating-container,
+    .cuisines-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .restaurant-cards {
+        grid-template-columns: 1fr;
+    }
+}
